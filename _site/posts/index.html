@@ -468,9 +468,26 @@ article > div > h2:first-of-type + pre {
   border-radius: 8px;
 }
 
-/* Tighten table */
+/* Table styling */
 table {
   margin: 1.5rem 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border: 1px solid var(--color-border, #ccc);
+}
+
+th {
+  background: color-mix(in srgb, var(--color-text, #222) 5%, transparent);
+  font-weight: 600;
+}
+
+tr:hover {
+  background: color-mix(in srgb, var(--color-text, #222) 3%, transparent);
 }
 
 /* Footer spacing */
