@@ -13,6 +13,8 @@ rsslobster onboard
 
 Three questions. Thirty seconds. Your site is live.
 
+See what it looks like: **[computationalsubstrate.com](https://computationalsubstrate.com)** — a real site running on RSS Lobster right now.
+
 ## Publish
 
 Send a message from Telegram. The lobster classifies it, generates static HTML with inlined CSS, updates your RSS feed, and deploys via git push. Under 4 seconds. Your words are never rewritten.
