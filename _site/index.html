@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RSS Lobster</title>
-  <meta name="description" content="">
+  <meta name="description" content="Publish and read on the open web. Own both sides of the feed.
+RSS Lobster is a personal publishing and reading system built on RSS. Publish from your phone to y">
   <meta name="author" content="Hector Zarate">
   <link rel="alternate" type="application/rss+xml" title="RSS Lobster" href="/feed.xml">
   <link rel="alternate" type="application/feed+json" title="RSS Lobster" href="/feed.json">
@@ -472,26 +473,25 @@ article {
     <article>
       <h1>RSS Lobster</h1>
       <div><p>Publish and read on the open web. Own both sides of the feed.</p>
-<p>RSS Lobster is a personal publishing and reading system built on RSS. You publish from your phone to your own site. You subscribe to feeds and read them in the same place. No algorithms. No platform. Just the protocol the web already agreed on.</p>
+<p>RSS Lobster is a personal publishing and reading system built on RSS. Publish from your phone to your own site. Subscribe to feeds and read them in the same CLI. No algorithms. No platform.</p>
 <p><strong>Cost:</strong> $12/year for a domain. Hosting: free.</p>
 <h2>Get started</h2>
 <pre class="shiki css-variables" style="background-color:var(--shiki-background);color:var(--shiki-foreground)" tabindex="0"><code class="language-bash"><span class="line"><span style="color:var(--shiki-token-function)">npm</span><span style="color:var(--shiki-token-string)"> install</span><span style="color:var(--shiki-token-string)"> -g</span><span style="color:var(--shiki-token-string)"> rsslobster</span></span>
 <span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> onboard</span></span></code></pre>
 <p>Three questions. Thirty seconds. Your site is live.</p>
-<h2>Publish from your phone</h2>
-<p>Send a message from Telegram. The lobster classifies it, generates a static HTML page with inlined CSS, updates your RSS and JSON feeds, commits to git, and deploys. Under 4 seconds end-to-end.</p>
-<p>Your words are never rewritten — the LLM classifies metadata only.</p>
+<h2>Publish</h2>
+<p>Send a message from Telegram. The lobster classifies it, generates static HTML with inlined CSS, updates your RSS feed, and deploys via git push. Under 4 seconds. Your words are never rewritten.</p>
 <table>
 <thead>
 <tr>
 <th>Type</th>
 <th>You send</th>
-<th>Output</th>
+<th>What you get</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Micro</strong></td>
+<td><strong>Microblog</strong></td>
 <td>A short thought</td>
 <td>Tweet-style post</td>
 </tr>
@@ -503,7 +503,7 @@ article {
 <tr>
 <td><strong>Image</strong></td>
 <td>Photo with caption</td>
-<td>Image post</td>
+<td>Image post with <code>&lt;figure&gt;</code></td>
 </tr>
 <tr>
 <td><strong>Link</strong></td>
@@ -512,31 +512,22 @@ article {
 </tr>
 </tbody>
 </table>
-<h2>Read the open web</h2>
+<h2>Read</h2>
 <pre class="shiki css-variables" style="background-color:var(--shiki-background);color:var(--shiki-foreground)" tabindex="0"><code class="language-bash"><span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> feeds</span><span style="color:var(--shiki-token-string)"> add</span><span style="color:var(--shiki-token-string)"> https://simonwillison.net</span></span>
 <span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> feeds</span></span></code></pre>
-<p>Subscribe to feeds. Poll them. Star what matters. Share back to your site as link posts. The same CLI that publishes your voice to the open web also reads everyone else’s.</p>
-<p>Read something interesting → <code>rsslobster feeds share 3</code> → it’s published on your site. One tool, both directions.</p>
-<h2>Progressive setup</h2>
-<p>Each capability is independent. Use what you need:</p>
+<p>Subscribe. Poll. Star what matters. Share back to your site as link posts. Read something interesting, run <code>feeds share 3</code>, and it’s published on your site. One tool, both directions.</p>
+<h2>How it works</h2>
+<p><strong>Publish side:</strong> phone → classify → HTML + RSS → git push → deploy → live in 4 seconds</p>
+<p><strong>Read side:</strong> subscribe → poll → notify → star → share → publish as link post on your site</p>
+<p>The two sides compose. You read something, share it, your subscribers get it in their readers. The open web feedback loop.</p>
+<p>Files as the API. Git is the database. Zero JavaScript in output.</p>
+<h2>Setup is progressive</h2>
 <pre class="shiki css-variables" style="background-color:var(--shiki-background);color:var(--shiki-foreground)" tabindex="0"><code class="language-bash"><span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> enable</span><span style="color:var(--shiki-token-string)"> telegram</span><span style="color:var(--shiki-token-comment)">   # publish from your phone</span></span>
 <span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> enable</span><span style="color:var(--shiki-token-string)"> model</span><span style="color:var(--shiki-token-comment)">      # AI-powered classification</span></span>
 <span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> enable</span><span style="color:var(--shiki-token-string)"> deploy</span><span style="color:var(--shiki-token-comment)">     # auto-deploy via git push</span></span></code></pre>
-<h2>Zero JavaScript output</h2>
-<p>Every generated page uses system fonts, inlined CSS, zero external requests. WCAG AA contrast. Works without JavaScript entirely.</p>
-<p>Four style presets: <strong>minimal</strong>, <strong>brutalist</strong>, <strong>magazine</strong>, <strong>terminal</strong>. Every CSS custom property is overridable.</p>
-<h2>How it works</h2>
-<pre class="shiki css-variables" style="background-color:var(--shiki-background);color:var(--shiki-foreground)" tabindex="0"><code class="language-text"><span class="line"><span>publish:                              read:</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>  phone → classify → html + rss         subscribe → poll → notify</span></span>
-<span class="line"><span>            ↓                                        ↓</span></span>
-<span class="line"><span>        git push → deploy               star → share → publish</span></span>
-<span class="line"><span>            ↓                                        ↓</span></span>
-<span class="line"><span>    live in &#x3C; 4 seconds                 your site ← link post</span></span></code></pre>
-<p>Files as the API. Git is the database. The filesystem is the state.</p>
+<p>Each capability is independent. Use what you need, skip what you don’t.</p>
 <h2>Open source</h2>
-<p>MIT licensed.</p>
-<p><a href="https://github.com/HectorZarate/rsslobster">GitHub</a> · <a href="https://www.npmjs.com/package/rsslobster">npm</a></p>
+<p>MIT licensed. <a href="https://github.com/HectorZarate/rsslobster">GitHub</a> · <a href="https://www.npmjs.com/package/rsslobster">npm</a></p>
 </div>
     </article>
   </main>
