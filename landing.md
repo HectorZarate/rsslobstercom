@@ -69,6 +69,6 @@ Files as the API. Git is the database. The filesystem is the state.
 
 ## Open source
 
-MIT licensed. Built by [Hector Zarate](https://computationalsubstrate.com).
+MIT licensed.
 
 [GitHub](https://github.com/HectorZarate/rsslobster) · [npm](https://www.npmjs.com/package/rsslobster)
