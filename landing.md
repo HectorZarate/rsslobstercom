@@ -43,9 +43,11 @@ Subscribe. Poll. Star what matters. Share back to your site as link posts. Notif
 
 **Publish side:** phone → classify → HTML + RSS → git push → deploy → live in 4 seconds
 
-**Read side:** subscribe → poll → notify → star → share → publish as link post on your site
+**Read side:** subscribe → poll → read → star
 
-The two sides compose. You read something, share it, your subscribers get it in their readers. The open web feedback loop.
+↳ `feeds share` → link post on your site → your feed → your subscribers' readers
+
+The two sides compose. The read side is a regular RSS reader. The share is the moment it loops back into the publish side.
 
 Files as the API. Git is the database. Zero JavaScript in output.
 

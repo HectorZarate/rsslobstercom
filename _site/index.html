@@ -545,8 +545,9 @@ article {
 <p>Subscribe. Poll. Star what matters. Share back to your site as link posts. Notifications are per-feed with quiet hours, keyword filters, and configurable schedules (<code>immediate</code>, <code>hourly</code>, <code>daily</code>, <code>weekly</code>). Anything that can call a command can drive it: scripts, cron jobs, LLM agents. The lobster itself uses the reader as a tool.</p>
 <h2>How it works</h2>
 <p><strong>Publish side:</strong> phone → classify → HTML + RSS → git push → deploy → live in 4 seconds</p>
-<p><strong>Read side:</strong> subscribe → poll → notify → star → share → publish as link post on your site</p>
-<p>The two sides compose. You read something, share it, your subscribers get it in their readers. The open web feedback loop.</p>
+<p><strong>Read side:</strong> subscribe → poll → read → star</p>
+<p>↳ <code>feeds share</code> → link post on your site → your feed → your subscribers' readers</p>
+<p>The two sides compose. The read side is a regular RSS reader. The share is the moment it loops back into the publish side.</p>
 <p>Files as the API. Git is the database. Zero JavaScript in output.</p>
 <h2>Setup is progressive</h2>
 <pre class="shiki css-variables" style="background-color:var(--shiki-background);color:var(--shiki-foreground)" tabindex="0"><code class="language-bash"><span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> enable</span><span style="color:var(--shiki-token-string)"> telegram</span><span style="color:var(--shiki-token-comment)">   # publish from your phone</span></span>
