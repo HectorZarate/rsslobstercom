@@ -1,0 +1,22 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "RSS Lobster",
+  "home_page_url": "https://rsslobster.com",
+  "feed_url": "https://rsslobster.com/feed.json",
+  "description": "Publish and read on the open web. Own both sides of the feed.",
+  "language": "en",
+  "icon": "https://rsslobster.com/icon.png",
+  "favicon": "https://rsslobster.com/icon.png",
+  "hubs": [
+    {
+      "type": "WebSub",
+      "url": "https://pubsubhubbub.appspot.com"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Hector Zarate"
+    }
+  ],
+  "items": []
+}

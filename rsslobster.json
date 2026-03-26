@@ -1,0 +1,22 @@
+{
+  "domain": "rsslobster.com",
+  "title": "RSS Lobster",
+  "description": "Publish and read on the open web. Own both sides of the feed.",
+  "author": "Hector Zarate",
+  "language": "en",
+  "style": {
+    "preset": "minimal",
+    "cssFile": "landing.css"
+  },
+  "repo": "",
+  "permalink": "/posts/:slug/index.html",
+  "homepage": "landing",
+  "pages": [
+    {
+      "title": "RSS Lobster",
+      "slug": "landing",
+      "body": "",
+      "bodyFile": "landing.md"
+    }
+  ]
+}

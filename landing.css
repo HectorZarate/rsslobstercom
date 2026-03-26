@@ -1,0 +1,35 @@
+/* Landing page overrides */
+article > h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25em;
+}
+
+article > div > p:first-child {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-muted, #666);
+  margin-bottom: 2rem;
+}
+
+article > div > h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Make the install block stand out */
+article > div > h2:first-of-type + pre {
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Tighten table */
+table {
+  margin: 1.5rem 0;
+}
+
+/* Footer spacing */
+article {
+  padding-bottom: 2rem;
+}
