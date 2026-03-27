@@ -28,16 +28,16 @@ Send a message from Telegram. The lobster classifies it, generates static HTML w
 
 ## Read
 
-A full RSS reader. Subscribe, poll, star, share, OPML import/export, notification schedules, AI recaps.
+A full RSS reader. Subscribe, poll, star, reblog, OPML import/export, notification schedules, AI recaps.
 
 The surface is a CLI.
 
 ```bash
-rsslobster feeds add https://simonwillison.net
-rsslobster feeds
+rsslobster feed add https://simonwillison.net
+rsslobster feed
 ```
 
-Subscribe. Poll. Star what matters. Share back to your site as link posts. Notifications are per-feed with quiet hours, keyword filters, and configurable schedules (`immediate`, `hourly`, `daily`, `weekly`). Anything that can call a command can drive it: scripts, cron jobs, LLM agents. The lobster itself uses the reader as a tool.
+Subscribe. Poll. Star what matters. Reblog to any of your sites as link posts. Notifications are per-feed with quiet hours, keyword filters, and configurable schedules (`immediate`, `hourly`, `daily`, `weekly`). Anything that can call a command can drive it: scripts, cron jobs, LLM agents. The lobster itself uses the reader as a tool.
 
 ## How it works
 
@@ -45,7 +45,7 @@ Subscribe. Poll. Star what matters. Share back to your site as link posts. Notif
 
 **Multi-feed publisher.** Publish to any of your sites from one CLI. Blog, photos, personal page. Phone → classify → HTML + RSS → git push → deploy → live in 4 seconds.
 
-**Reblog.** See something good in your subscriptions? Share it to any of your feeds with your own commentary. `feeds share 3 --to photo` and it becomes a link post on your photo site.
+**Reblog.** See something good in your subscriptions? Reblog it to any of your feeds with your own commentary. `feed reblog 1 --to blog -m "This is worth reading"` and it becomes a link post on your blog.
 
 Files as the API. Git is the database. Zero JavaScript in output.
 
