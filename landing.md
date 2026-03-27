@@ -41,13 +41,11 @@ Subscribe. Poll. Star what matters. Share back to your site as link posts. Notif
 
 ## How it works
 
-**Publish side:** phone → classify → HTML + RSS → git push → deploy → live in 4 seconds
+**RSS reader.** Subscribe, poll, read, star. Full reader with notifications, OPML import/export, and AI recaps. The surface is a CLI.
 
-**Read side:** subscribe → poll → read → star
+**Multi-feed publisher.** Publish to any of your sites from one CLI. Blog, photos, personal page. Phone → classify → HTML + RSS → git push → deploy → live in 4 seconds.
 
-↳ `feeds share` → link post on your site → your feed → your subscribers' readers
-
-The two sides compose. The read side is a regular RSS reader. The share is the moment it loops back into the publish side.
+**Reblog.** See something good in your subscriptions? Share it to any of your feeds with your own commentary. `feeds share 3 --to photo` and it becomes a link post on your photo site.
 
 Files as the API. Git is the database. Zero JavaScript in output.
 

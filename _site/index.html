@@ -544,10 +544,9 @@ article {
 <span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> feeds</span></span></code></pre>
 <p>Subscribe. Poll. Star what matters. Share back to your site as link posts. Notifications are per-feed with quiet hours, keyword filters, and configurable schedules (<code>immediate</code>, <code>hourly</code>, <code>daily</code>, <code>weekly</code>). Anything that can call a command can drive it: scripts, cron jobs, LLM agents. The lobster itself uses the reader as a tool.</p>
 <h2>How it works</h2>
-<p><strong>Publish side:</strong> phone → classify → HTML + RSS → git push → deploy → live in 4 seconds</p>
-<p><strong>Read side:</strong> subscribe → poll → read → star</p>
-<p>↳ <code>feeds share</code> → link post on your site → your feed → your subscribers' readers</p>
-<p>The two sides compose. The read side is a regular RSS reader. The share is the moment it loops back into the publish side.</p>
+<p><strong>RSS reader.</strong> Subscribe, poll, read, star. Full reader with notifications, OPML import/export, and AI recaps. The surface is a CLI.</p>
+<p><strong>Multi-feed publisher.</strong> Publish to any of your sites from one CLI. Blog, photos, personal page. Phone → classify → HTML + RSS → git push → deploy → live in 4 seconds.</p>
+<p><strong>Reblog.</strong> See something good in your subscriptions? Share it to any of your feeds with your own commentary. <code>feeds share 3 --to photo</code> and it becomes a link post on your photo site.</p>
 <p>Files as the API. Git is the database. Zero JavaScript in output.</p>
 <h2>Setup is progressive</h2>
 <pre class="shiki css-variables" style="background-color:var(--shiki-background);color:var(--shiki-foreground)" tabindex="0"><code class="language-bash"><span class="line"><span style="color:var(--shiki-token-function)">rsslobster</span><span style="color:var(--shiki-token-string)"> enable</span><span style="color:var(--shiki-token-string)"> telegram</span><span style="color:var(--shiki-token-comment)">   # publish from your phone</span></span>
