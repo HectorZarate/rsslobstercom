@@ -17,30 +17,30 @@ RSS Lobster is a personal publishing and reading system built on RSS. Publish fr
   <link rel="alternate" type="application/rss+xml" title="RSS Lobster" href="/feed.xml">
   <link rel="alternate" type="application/feed+json" title="RSS Lobster" href="/feed.json">
   <style>:root {
-  --font-body: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
-  --font-heading: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-size: 18px;
-  --line-height: 1.6;
-  --max-width: 640px;
-  --color-text: #222222;
-  --color-bg: #FFFFF0;
-  --color-accent: #0000EE;
-  --color-link: #0000EE;
-  --color-visited: #551A8B;
-  --color-muted: #666666;
-  --color-border: #CCCCCC;
+  --font-body: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --font-heading: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --font-size: 15px;
+  --line-height: 1.5;
+  --max-width: 720px;
+  --color-text: #FFB000;
+  --color-bg: #0D0D0D;
+  --color-accent: #00CCCC;
+  --color-link: #00CCCC;
+  --color-visited: #009999;
+  --color-muted: #AA7700;
+  --color-border: #333333;
   --border-radius: 0px;
-  --shiki-foreground: #383a42;
-  --shiki-background: color-mix(in srgb, #222222 5%, transparent);
-  --shiki-token-constant: #986801;
-  --shiki-token-string: #50a14f;
-  --shiki-token-comment: #a0a1a7;
-  --shiki-token-keyword: #a626a4;
-  --shiki-token-parameter: #383a42;
-  --shiki-token-function: #4078f2;
-  --shiki-token-string-expression: #50a14f;
-  --shiki-token-punctuation: #383a42;
-  --shiki-token-link: #0000EE;
+  --shiki-foreground: #FFB000;
+  --shiki-background: #1A1A1A;
+  --shiki-token-constant: #00CCCC;
+  --shiki-token-string: #33CC33;
+  --shiki-token-comment: #AA7700;
+  --shiki-token-keyword: #FF6600;
+  --shiki-token-parameter: #FFB000;
+  --shiki-token-function: #00CCCC;
+  --shiki-token-string-expression: #33CC33;
+  --shiki-token-punctuation: #AA7700;
+  --shiki-token-link: #00CCCC;
 }
 
 /*
@@ -163,6 +163,37 @@ pre {
 pre code {
   background: none;
   padding: 0;
+}
+
+/* === Tables === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  font-weight: 600;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 480px) {
+  table { font-size: 0.8rem; }
+  th, td { padding: 0.4rem 0.5rem; }
 }
 
 /* === Shiki code blocks — override pre defaults with shiki vars === */
@@ -373,6 +404,32 @@ footer {
   font-size: 0.75rem;
 }
 
+/* === Post navigation === */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.post-nav a {
+  color: var(--color-link);
+  text-decoration: none;
+  max-width: 45%;
+}
+
+.post-nav a:hover {
+  text-decoration: underline;
+}
+
+.post-nav-next {
+  text-align: right;
+  margin-left: auto;
+}
+
 /* === Selection — intentional === */
 ::selection {
   background: var(--color-link);
@@ -495,7 +552,7 @@ article {
   </header>
   <main id="main">
     <article>
-      <h1>RSS Lobster</h1>
+      
       <div><p>Publish and read on the open web. Own both sides of the feed.</p>
 <p>RSS Lobster is a personal publishing and reading system built on RSS. Publish from your phone to your own site. Subscribe to feeds and read them in the same CLI. No algorithms. No platform.</p>
 <p><strong>Cost:</strong> $12/year for a domain. Hosting: free.</p>

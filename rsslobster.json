@@ -5,7 +5,7 @@
   "author": "Hector Zarate",
   "language": "en",
   "style": {
-    "preset": "minimal",
+    "preset": "terminal",
     "cssFile": "landing.css"
   },
   "repo": "",
